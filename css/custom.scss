@@ -1,0 +1,92 @@
+$bodyColor : #1C1D2F;
+$font : 'Open Sans Condensed', sans-serif;
+$white : #fff;
+$cardsColor : #383B5E;
+$borderleft : 3px solid #e86369;
+$center : center;
+$cardsMargin : 18px;
+$icon16 : 16px;
+$icon24 : 24px;
+$icon32 : 32px;
+$absolute : absolute;
+$margin30 : 30px;
+$pointer : pointer;
+body{
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color:$bodyColor;
+}
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled {padding-left: 250px;}
+#logo{margin-top: 5px;margin-left: 5px;width:233px;height:60px;background-size: 233px 60px;background-image: url('img/logo.png');}
+.slidedown_ul{color:$white;}
+#menu_border{font-family: $font;}
+#demo{font-size:22px;color:$white;margin-top: 10px;float: right;margin-right: 20px;font-family: $font;}
+.cards{cursor: pointer;height: 200px;color:$white;background-color: $cardsColor;}
+.sidebar-brand:hover{opacity: 1;}
+.sidebaractive{border-left: $borderleft;}
+.font_padding{font-size: 35px;margin: 10px;padding: 40px;}
+.font_float{float: right;margin-top: -40px;}
+.baslik{color:$white;font-family: $font;}
+.cards_lower{margin-top: -10px;text-align: $center;opacity: 0.5;font-family: $font;}
+.cards_lower_yellow{color: #E3BB87;font-family: $font;text-align: $center;margin-top: $cardsMargin;}
+.cards_lower_red{color:#e86369;font-family: $font;text-align: $center;margin-top: $cardsMargin;}
+.cards_lower_color{text-align: $center;margin-top:$cardsMargin;color: #54ADE0;font-family:  $font;}
+.clock{background-image: url('img/clock.png');height: $icon16;width: $icon16;position: $absolute;}
+.settings{background-image: url('img/settings.png');height: $icon32;width: $icon32;}
+.error{background-image: url('img/error.png');height: $icon16;width: $icon16;position: $absolute;}
+.alt{color: $white;opacity: 0.5;font-family: $font;}
+.success{background-image: url('img/success.png');height: $icon16;width: $icon16;position: $absolute;}
+.shipped{background-image: url('img/shipped.png');height: $icon32;width: $icon32;}
+.cards_lower_font{text-align: $center;margin-top: -5px;color: #60D990;font-family: $font;}
+.img-image{background-image: url('img/layers.png');height: $icon32;width: $icon32;margin: $margin30;cursor: $pointer;}
+.img_bckgrnd{background-image: url('img/left.png');height: $icon32;width: $icon32;margin: $margin30;cursor: $pointer;}
+.imgPointer{background-image: url('img/list.png');height: $icon32;width: $icon32;margin: $margin30;cursor: $pointer;}
+.hamburger_menu{margin-left: 10px;z-index:99;cursor:$pointer;background-image: url('img/menu.png');height: $icon24;width: $icon24;position: $absolute;margin-top: 16px;}
+.nav-lower{height:60px;margin: 0 auto;}
+.nav-menu{height:60px;background:$cardsColor;box-shadow: 0px 0px 20px 1px;}
+#sidebar-wrapper {z-index: 1000;position: fixed;left: 250px;width: 0;height: 100%;margin-left: -250px;overflow: hidden;background: #30304C;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;transition: all 0.5s ease;}
+#wrapper.toggled #sidebar-wrapper {width: 250px;}
+#page-content-wrapper {width: 100%;position: $absolute;padding: 15px;}
+#wrapper.toggled #page-content-wrapper {position: $absolute;margin-right: -250px;}
+.sidebar-nav {position: absolute;width: 250px;margin: 0;padding: 0;list-style: none;margin-top: 30px;}
+.sidebar-nav li {text-indent: 20px;line-height: 40px;}
+.sidebar-nav li a {display: block;text-decoration: none;color: #999999;}
+.sidebar-nav li a:hover {text-decoration: none;color: $white;background: rgba(255, 255, 255, 0.2);}
+.sidebar-nav li a:active, .sidebar-nav li a:focus {text-decoration: none;}
+.sidebar-nav>.sidebar-brand {height: 65px;font-size: 18px;line-height: 60px;}
+.sidebar-nav>.sidebar-brand a {color: #999999;}
+.sidebar-nav>.sidebar-brand a:hover {color: $white;background: none;}
+.fc .fc-toolbar>*>:first-child {margin-left: 0;color: $white;}
+.ui-widget-content {color:$white;background-color: $cardsColor;}
+.menu_sidebar{display: none;}
+.cards:hover{-webkit-transition: all 1s ease;-moz-transition: all 1s ease;-o-transition: all 1s ease;transition: all 1s ease;background-color: #30304C;}
+@media(min-width:768px) {
+#wrapper {padding-left: 0;}
+#wrapper.toggled {padding-left: 250px;}
+#sidebar-wrapper {width: 0;}
+#wrapper.toggled #sidebar-wrapper {width: 250px;}
+#page-content-wrapper {padding: 20px;position: relative;}
+#wrapper.toggled #page-content-wrapper {position: relative;margin-right: 0;}
+}
+@media(max-width: 850px){
+ #sidebar-wrapper{position: $absolute;top: 0;left: 250px;}
+ #wrapper.toggled{padding-left: 0px;}
+ .menu_sidebar{cursor:$pointer;display: block;color: $white;background-image: url('img/back.png');height: $icon32;width: $icon32;float: right;margin-right:  10px;margin-top:  5px;}
+ .sidebar-nav{margin-top: 50px;}
+}
+.charts{margin-top: 10px;background-color: $cardsColor;}
+.chart {width: 100%;min-height: 450px;}
+.dropbtn {background-color: $cardsColor;color: white;padding: 14px;font-size: 16px;border: none;cursor: $pointer;}
+.dropdown {position: relative;display: inline-block;}
+.dropdown-content {display: none;position: $absolute;right: 0;background-color: #f9f9f9;min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+.dropdown-content a {color: black;padding: 12px 16px;text-decoration: none;display: block;}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {display: block;}
